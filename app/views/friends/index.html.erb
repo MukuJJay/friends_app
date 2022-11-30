@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 style="color: #0E6655; text-align: center;">FRIENDS LIST</h1>
+<p style="color: #0E6655; text-align: center;">click on add friends to add new friends</p>
+
+<div id="friends" class="d-flex flex-wrap" style="justify-content: center; gap: 20px; padding:10px 0 40px;">
+
+    <% @friends.each do |friend| %>
+        <div style="width: 300px; height: 280px; border-radius: 6px; padding: 20px; background-color: #D0ECE7; overflow: auto;">
+          <%= render friend %>
+          <p>
+            <%= link_to "Edit", friend, class:"btn btn-info" %>
+          </p>
+        </div>
+    <% end %>
+
+</div>
+
